@@ -20,7 +20,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     padding-top: 60px; /* Aggiunge spazio per l'header fisso */
