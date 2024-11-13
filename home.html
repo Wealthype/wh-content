@@ -9,97 +9,306 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+     <!--
+     <header class="header">
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">Logo</div>
+    </header>
+
+     -->
+
 
     <div class="content-wrapper">
+        <!-- Sidebar -->
 
-        <main>
-            <!-- 
-            <div class="search-bar">
-                <input type="text" placeholder="Cerca...">
-                <select class="personas-select">
-                    <option value="">Seleziona Persona</option>
-                    <option value="persona1">Persona 1</option>
-                    <option value="persona2">Persona 2</option>
-                    <option value="persona3">Persona 3</option>
-                </select>
-            </div>
-            -->
 
-            <section id="home">
-                <h2 class="section-title">Portale contenuti</h2>
+
+         <!-- Main Content -->
+
+        <main role="main">
+            <section id="home" class="section">
+                <h2 id="portale-contenuti" class="section-title">Portale contenuti</h2>
                 
-                <div class="carousel-row">
-                    <div class="carousel" id="conversation-starter-carousel">
-                        <h3>Conversation Starter</h3>
+                    <div class="carousel-row">
+                        <!-- Primo Carousel: Conversation Starter -->
+                        <div id="conversation-starter-carousel" class="carousel">
+                        <div class="carousel-header">
+                            <h3>Conversation Starter</h3>
+                        </div>
+
                         <div class="carousel-item active">
-                            <img src="images/cs/mercati.jpg" alt="Strategia d'investimento">
+                            <div class="carousel-image">
+                                <img src="images/cs/mercati.jpg" alt="Strategia d'investimento">
+                            </div>
+
+                            <div class="carousel-meta">
+                                <span class="meta-date">8 Nov 2024</span>
+                            </div>
+
                             <h3>Mercati | Le fasi di ribasso</h3>
-                            <p>Le fasi di ribasso sui mercati possono generare ansie e preoccupazioni, ...</p>
+
+                            <div class="carousel-description">
+                                Le fasi di ribasso sui mercati possono generare ansie e preoccupazioni,
+                                ma anche comportamenti scorretti: ecco cosa non fare.
+                            </div>
+
+                            <div class="carousel-nav">
+                                <div class="carousel-nav-buttons">
+                                    <button class="nav-button" aria-label="Precedente">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="nav-button" aria-label="Successivo">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="carousel-actions">
+                                    <a href="https://drive.google.com/file/d/1bQC-My9kvVEI38Uri6KFIcLQ4diAeMHm/view" class="download-btn" target="_blank">Scarica</a>
+                                    <span class="read-more">Leggi di più →</span>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="carousel-item">
-                            <img src="images/cs/assicurazioni.jpg" alt="Strategia d'investimento">
+                            <div class="carousel-image">
+                                <img src="images/cs/assicurazioni.jpg" alt="Strategia d'investimento">
+                            </div>
+
+                            <div class="carousel-meta">
+                                <span class="meta-date">7 Nov 2024</span>
+                            </div>
+
                             <h3>Bisogni | Assicurazioni</h3>
-                            <p>Proteggersi dall'impatto sulla nostra vita e i nostri cari ...</p>
-                        </div>
-                        <div class="carousel-nav">
-                            <button class="prevBtn">Precedente</button>
-                            <button class="nextBtn">Successivo</button>
+
+                            <div class="carousel-description">
+                                Proteggersi dall'impatto sulla nostra vita e i nostri cari di imprevisti 
+                                anche molto importanti non solo è possibile, ma anche doveroso.
+                            </div>
+
+                            <div class="carousel-nav">
+                                <!-- Stessa struttura di navigazione del precedente -->
+                                <div class="carousel-nav-buttons">
+                                    <button class="nav-button" aria-label="Precedente">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="nav-button" aria-label="Successivo">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="carousel-actions">
+                                    <a href="https://drive.google.com/file/d/1taf2kVYk7EsTttBZaBPJeI1VpDYIfxcV/view" class="download-btn" target="_blank">Scarica</a>
+                                    <span class="read-more">Leggi di più →</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="carousel" id="view-casa-carousel">
-                        <h3>News di Mercato</h3>
+
+                    <!-- Secondo Carousel: News di Mercato -->
+                    <div id="view-casa-carousel" class="carousel">
+                        <div class="carousel-header">
+                            <h3>News di mercato</h3>
+                        </div>
+
                         <div class="carousel-item active">
-                            <img src="images/view/view_maggio.jpg" alt="Pianificazione pensionistica">
+                            <div class="carousel-image">
+                                <img src="images/view/view_maggio.jpg" alt="Pianificazione pensionistica">
+                            </div>
+
+                            <div class="carousel-meta">
+                                <span class="meta-date">8 Nov 2024</span>
+                            </div>
+
                             <h3>View di maggio</h3>
-                            <p>Il PIL globale ha mostrato una crescita del 3.5% nell'ultimo trimestre ...</p>
+
+                            <div class="carousel-description">
+                                Il PIL globale ha mostrato una crescita del 3,5% nell'ultimo trimestre, 
+                                un dato positivo che supera le aspettative degli analisti.
+                            </div>
+
+                            <div class="carousel-nav">
+                                <div class="carousel-nav-buttons">
+                                    <button class="nav-button" aria-label="Precedente">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="nav-button" aria-label="Successivo">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="carousel-actions">
+                                    <a href="https://drive.google.com/file/d/1bQC-My9kvVEI38Uri6KFIcLQ4diAeMHm/view" class="download-btn" target="_blank">Scarica</a>
+                                    <span class="read-more">Leggi di più →</span>
+                                </div>
+                            </div>
                         </div>
+
+
                         <div class="carousel-item">
-                            <img src="images/view/view_aprile.jpg" alt="Pianificazione pensionistica">
+                            <div class="carousel-image">
+                                <img src="images/view/view_aprile.jpg" alt="Pianificazione pensionistica">
+                            </div>
+
+                            <div class="carousel-meta">
+                                <span class="meta-date">8 Nov 2024</span>
+                            </div>
+
                             <h3>View di aprile</h3>
-                            <p>I mercati azionari hanno registrato una performance positiva ...</p>
-                        </div>
-                        <div class="carousel-nav">
-                            <button class="prevBtn">Precedente</button>
-                            <button class="nextBtn">Successivo</button>
+
+                            <div class="carousel-description">
+                                I mercati azionari hanno registrato una performance positiva, 
+                                con l'indice S&P 500 su nuovi massimi storici guidato dal settore tech.
+                            </div>
+
+                            <div class="carousel-nav">
+                                <div class="carousel-nav-buttons">
+                                    <button class="nav-button" aria-label="Precedente">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="nav-button" aria-label="Successivo">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="carousel-actions">
+                                    <a href="https://drive.google.com/file/d/1bQC-My9kvVEI38Uri6KFIcLQ4diAeMHm/view" class="download-btn" target="_blank">Scarica</a>
+                                    <span class="read-more">Leggi di più →</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+
+
+
+
+                    <!-- Terzo Carousel: Learning -->
                     <div class="carousel" id="finanza-comportamentale-carousel">
-                        <h3>Learning</h3>
+                        <div class="carousel-header">
+                            <h3>Learning</h3>
+                        </div>
+
                         <div class="carousel-item active">
-                            <img src="images/fincomp/trappole.jpg" alt="Analisi di mercato">
+                            <div class="carousel-image">
+                                <img src="images/fincomp/trappole.jpg" alt="analisi mercato">
+                            </div>
+
+                            <div class="carousel-meta">
+                                <span class="meta-date">8 Nov 2024</span>
+                            </div>
+
                             <h3>Cosa fare se il cliente “si fissa” ...</h3>
-                            <p>Le decisioni finanziarie sono influenzate da emozioni e ...</p>
+
+                            <div class="carousel-description">
+                                Le decisioni finanziarie sono influenzate da pregiudizi. I consulenti devono aiutare 
+                                i clienti a riconoscerli per riuscire a evitarli.
+                            </div>
+
+                            <div class="carousel-nav">
+                                <div class="carousel-nav-buttons">
+                                    <button class="nav-button" aria-label="Precedente">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="nav-button" aria-label="Successivo">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="carousel-actions">
+                                    <a href="https://drive.google.com/file/d/1bQC-My9kvVEI38Uri6KFIcLQ4diAeMHm/view" class="download-btn" target="_blank">Scarica</a>
+                                    <span class="read-more">Leggi di più →</span>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="carousel-item">
-                            <img src="images/fincomp/avversione.jpg" alt="Analisi di mercato">
-                            <h3>Come contrastare l’avversione alle ...</h3>
-                            <p>L'avversione alle perdite influenza le decisioni d'investimento ...</p>
-                        </div>
-                        <div class="carousel-nav">
-                            <button class="prevBtn">Precedente</button>
-                            <button class="nextBtn">Successivo</button>
+                            <div class="carousel-image">
+                                <img src="images/fincomp/avversione.jpg" alt="Analisi di mercato">
+                            </div>
+
+                            <div class="carousel-meta">
+                                <span class="meta-date">8 Nov 2024</span>
+                            </div>
+
+                            <h3>Come contrastare l'avversione alle ...</h3>
+
+                            <div class="carousel-description">
+                                L'avversione alle perdite può innescare nell'investitore reazioni emotive. 
+                                Ma il consulente finanziario può aiutare a mitigarle. Ecco come.
+                            </div>
+
+                            <div class="carousel-nav">
+                                <div class="carousel-nav-buttons">
+                                    <button class="nav-button" aria-label="Precedente">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="nav-button" aria-label="Successivo">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="carousel-actions">
+                                    <a href="https://drive.google.com/file/d/1bQC-My9kvVEI38Uri6KFIcLQ4diAeMHm/view" class="download-btn" target="_blank">Scarica</a>
+                                    <span class="read-more">Leggi di più →</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 <div class="secondary-content">
                     <div class="secondary-item">
-                        <h3>Glossario</h3>
-                        <p>Una guida completa ai termini finanziari più importanti. Utile per professionisti e clienti.</p>
-                        <a href="glossario.html" class="download-btn">Apri Glossario</a>
+                        <div class="secondary-header">
+                            <h3>Rassegna News</h3>
+                        </div>
+                        <div class="secondary-description">
+                            Le ultime notizie e aggiornamenti dal mondo finanziario, curate dai
+                            nostri esperti.
+                        </div>
+                        <a href="rassegna-news.html" class="secondary-btn">Apri Rassegna</a>
                     </div>
+        
                     <div class="secondary-item">
-                        <h3>Rassegna News</h3>
-                        <p>Le ultime notizie e aggiornamenti dal mondo finanziario, curate dai nostri esperti.</p>
-                        <a href="rassegna-news.html" class="download-btn">Apri Rassegna</a>
+                        <div class="secondary-header">
+                            <h3>Glossario</h3>
+                        </div>
+                        <div class="secondary-description">
+                            Una guida completa ai termini finanziari più importanti. Utile per
+                            professionisti e clienti.
+                        </div>
+                        <a href="glossario.html" class="secondary-btn">Apri Glossario</a>
                     </div>
                 </div>
             </section>
         </main>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

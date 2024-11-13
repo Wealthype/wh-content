@@ -1,75 +1,54 @@
-function setupCollapsibleMenu() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-    const content = document.querySelector('main');
-    const body = document.body;
-
-    menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('collapsed');
-        body.classList.toggle('sidebar-open');
-
-        if (window.innerWidth <= 768) {
-            // Per schermi piccoli, non spostiamo il contenuto principale
-            content.style.marginLeft = '0';
-        } else {
-            // Per schermi grandi, spostiamo il contenuto principale
-            content.style.marginLeft = sidebar.classList.contains('collapsed') ? '0' : '250px';
-        }
-    });
-
-    // Gestisce il ridimensionamento della finestra
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            content.style.marginLeft = sidebar.classList.contains('collapsed') ? '0' : '250px';
-        } else {
-            content.style.marginLeft = '0';
-        }
-    });
-
-    // Imposta il margine sinistro corretto all'avvio
-    if (window.innerWidth > 768) {
-        content.style.marginLeft = sidebar.classList.contains('collapsed') ? '0' : '250px';
-    } else {
-        content.style.marginLeft = '0';
-    }
-}
-
+// Funzione per gestire il carousel
 function setupCarousel(carouselId) {
     const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+
     const items = carousel.querySelectorAll('.carousel-item');
-    const prevBtn = carousel.querySelector('.prevBtn');
-    const nextBtn = carousel.querySelector('.nextBtn');
+    const prevBtn = carousel.querySelector('.carousel-nav-buttons button:first-child');
+    const nextBtn = carousel.querySelector('.carousel-nav-buttons button:last-child');
+    
+    if (!items.length || !prevBtn || !nextBtn) return;
+
     let currentIndex = 0;
 
-    function showItem(index) {
-        items.forEach(item => item.classList.remove('active'));
-        items[index].classList.add('active');
+    function updateDisplay() {
+        // Nascondi tutti gli elementi
+        items.forEach(item => {
+            item.classList.remove('active');
+            item.style.opacity = '0';
+        });
+
+        // Mostra l'elemento corrente
+        items[currentIndex].classList.add('active');
+        items[currentIndex].style.opacity = '1';
+
+        // Debug
+        console.log(`Carousel ${carouselId}: Showing item ${currentIndex}`);
     }
 
+    // Gestione click precedente
     prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + items.length) % items.length;
-        showItem(currentIndex);
+        updateDisplay();
     });
 
+    // Gestione click successivo
     nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % items.length;
-        showItem(currentIndex);
+        updateDisplay();
     });
+
+    // Mostra il primo elemento all'inizializzazione
+    updateDisplay();
 }
 
-// Inizializza i caroselli
-setupCarousel('conversation-starter-carousel');
-setupCarousel('view-casa-carousel');
-setupCarousel('finanza-comportamentale-carousel');
-
-// Inizializza il menù
-setupCollapsibleMenu();
-
-// Aggiungiamo un listener per il cambio di persona
- /*
-document.querySelector('.personas-select').addEventListener('change', function() {
-    const selectedPersona = this.value;
-    console.log('Persona selezionata:', selectedPersona);
-    // Qui puoi aggiungere la logica per cambiare il contenuto in base alla persona selezionata
+// Inizializza tutti i carousel
+document.addEventListener('DOMContentLoaded', () => {
+    const carousels = [
+        'conversation-starter-carousel',
+        'view-casa-carousel',
+        'finanza-comportamentale-carousel'
+    ];
+    
+    carousels.forEach(id => setupCarousel(id));
 });
-*/
