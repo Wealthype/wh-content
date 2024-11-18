@@ -1,9 +1,8 @@
-// Funzione per gestire il carousel
 function setupCarousel(carouselId) {
     const carousel = document.getElementById(carouselId);
     if (!carousel) return;
 
-    const items = carousel.querySelectorAll('.carousel-item');
+    const items = Array.from(carousel.querySelectorAll('.carousel-item'));
     const prevBtn = carousel.querySelector('.carousel-nav-buttons button:first-child');
     const nextBtn = carousel.querySelector('.carousel-nav-buttons button:last-child');
     
@@ -11,38 +10,33 @@ function setupCarousel(carouselId) {
 
     let currentIndex = 0;
 
-    function updateDisplay() {
-        // Nascondi tutti gli elementi
+    function showSlide(index) {
         items.forEach(item => {
             item.classList.remove('active');
             item.style.opacity = '0';
+            // Rimuoviamo display:none per permettere la transizione
         });
 
-        // Mostra l'elemento corrente
-        items[currentIndex].classList.add('active');
-        items[currentIndex].style.opacity = '1';
-
-        // Debug
-        console.log(`Carousel ${carouselId}: Showing item ${currentIndex}`);
+        requestAnimationFrame(() => {
+            items[index].classList.add('active');
+            items[index].style.opacity = '1';
+        });
     }
 
-    // Gestione click precedente
     prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + items.length) % items.length;
-        updateDisplay();
+        showSlide(currentIndex);
     });
 
-    // Gestione click successivo
     nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % items.length;
-        updateDisplay();
+        showSlide(currentIndex);
     });
 
-    // Mostra il primo elemento all'inizializzazione
-    updateDisplay();
+    // Mostra il primo slide
+    showSlide(0);
 }
 
-// Inizializza tutti i carousel
 document.addEventListener('DOMContentLoaded', () => {
     const carousels = [
         'conversation-starter-carousel',
