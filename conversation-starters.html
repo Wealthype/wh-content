@@ -3,247 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversation Starter - Portale Professionale</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .conversation-starters {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .conversation-starter-card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .conversation-starter-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        .conversation-starter-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .conversation-starter-card p {
-            margin-bottom: 1rem;
-        }
-        .conversation-starter-card .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        .conversation-starter-card .tag {
-            background-color: var(--light-gray);
-            color: var(--text-color);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-        }
-        .search-container {
-            margin-bottom: 2rem;
-        }
-        #searchInput {
-            width: 100%;
-            padding: 0.75rem;
-            font-size: 1rem;
-            border: 1px solid var(--light-gray);
-            border-radius: 4px;
-        }
-        .conversation-starter-card{
-            justify-content: space-between;
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
+    <title>Conversation Starter</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="content-wrapper">
-
-        <main>
-            <section id="conversation-starter">
+        <main role="main">
+            <section id="conversation-starter" class="section">
                 <h2 class="section-title">Conversation Starter</h2>
-                <p>Qui puoi trovare presentazioni agili e d'impatto su temi di prodotto, mercato, Megatrend, utili per avviare una conversazione con i tuoi clienti o prospect.</p>
-                <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Cerca un conversation starter...">
-                </div>
+                <p class="section-description"> Qui puoi trovare presentazioni agili e d'impatto su temi di prodotto, mercato, Megatrend, utili per avviare una conversazione con i tuoi clienti o prospect.</p>
                 
+                <div class="search-container">
+                    <input type="text" placeholder="Cerca conversation starter..." class="search-input">
+                </div>
+
                 <div class="conversation-starters">
 
                     <div class="conversation-starter-card">
                         <div class="conversation-starter-body">
-                            <h3>Mercati | Le fasi di ribasso</h3>
-                            <p>Le fasi di ribasso sui mercati possono generare ansie e preoccupazioni, ma anche comportamenti scorretti: ecco cosa non fare.</p>
+                            <h3 class="card-title"> Mercati | Le fasi di ribasso</h3>
+                            <p class="card-description">Le fasi di ribasso sui mercati possono generare ansie e preoccupazioni, ma anche comportamenti scorretti: ecco cosa non fare.</p>
                         </div>
                         <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1bQC-My9kvVEI38Uri6KFIcLQ4diAeMHm/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
-
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Mercati | Megatrend</h3>
-                            <p>I Megatrend stanno ridefinendo il futuro nostro e quello del nostro pianeta. E stanno aprendo numerose opportunità di investimento.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Mercati | Megatrend</h3>
+                            <p class="card-description">I Megatrend stanno ridefinendo il futuro nostro e quello del nostro pianeta. E stanno aprendo numerose opportunità di investimento.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1_GrfTScA-g1eSFS_EZdzN-W_PFbKbd4e/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | Assicurazioni</h3>
-                            <p>Proteggersi dall'impatto sulla nostra vita e i nostri cari di imprevisti anche molto importanti non solo è possibile, ma anche doveroso. Scopriamo come fare.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | Assicurazioni</h3>
+                            <p class="card-description">Proteggersi dall'impatto sulla nostra vita e i nostri cari di imprevisti anche molto importanti non solo è possibile, ma anche doveroso. Scopriamo come fare.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1taf2kVYk7EsTttBZaBPJeI1VpDYIfxcV/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | Mutuo</h3>
-                            <p>Come funziona il mutuo immobiliare? Una guida agile allo strumento, accompagnata dai più recenti dati sui trend del settore.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | Mutuo</h3>
+                            <p class="card-description">Come funziona il mutuo immobiliare? Una guida agile allo strumento, accompagnata dai più recenti dati sui trend del settore.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/17hEmLjKa8lFvrrKDHIWBrTObYr-6RDRP/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | La carta di credito e debito</h3>
-                            <p>Carte di credito, di debito e prepagate: cosa sono, come si usano e i relativi vantaggi. I dati sul loro utilizzo e le relative tendenze.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | La carta di credito e debito</h3>
+                            <p class="card-description">Carte di credito, di debito e prepagate: cosa sono, come si usano e i relativi vantaggi. I dati sul loro utilizzo e le relative tendenze.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1iWyISaspcaU73LVGO4KswCIiS6KanmXB/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | I finanziamenti a breve termine</h3>
-                            <p>Tutto sui prestiti per le persone e le famiglie, che consentono di ottenere liquidità per far fronte alle più svariate esigenze.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | I finanziamenti a breve termine</h3>
+                            <p class="card-description">Tutto sui prestiti per le persone e le famiglie, che consentono di ottenere liquidità per far fronte alle più svariate esigenze.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1Wt6NnHKrQlq5oDsmYPpY1DT7I0yUU8kD/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <!-- NEW CONVERSATION STARTERS -->
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | La tua salute</h3>
-                            <p>La salute è il nostro bene più prezioso: come tutelarlo? Scopri gli strumenti di protezione che consentono di affrontare con serenità le spese legate ai vari imprevisti.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | La tua salute</h3>
+                            <p class="card-description">La salute è il nostro bene più prezioso: come tutelarlo? Scopri gli strumenti di protezione che consentono di affrontare con serenità le spese legate ai vari imprevisti.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1eAxKr3ZEqLBE8I_GMdz3hyqokiCU5wgT/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | La polizza TCM</h3>
-                            <p>Proteggere al meglio i propri cari in caso di prematura scomparsa: le caratteristiche e le specificità della Temporanea Caso Morte.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | La polizza TCM</h3>
+                            <p class="card-description">Proteggere al meglio i propri cari in caso di prematura scomparsa: le caratteristiche e le specificità della Temporanea Caso Morte.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1MI1_T5gQ9HQi5DMCsAZb6gZoKeSWUzYB/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | La polizza LTC</h3>
-                            <p>La polizza Long Term Care copre le spese per l'assistenza a lungo termine in caso di perdita di autosufficienza a causa di malattia, infortunio o invecchiamento.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | La polizza LTC</h3>
+                            <p class="card-description">La polizza Long Term Care copre le spese per l'assistenza a lungo termine in caso di perdita di autosufficienza a causa di malattia, infortunio o invecchiamento.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1fNGmvxqDDVFgvLnrK34i8hfjpkx6185v/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | La tua casa</h3>
-                            <p>introduce il tema della protezione della casa a tutto tondo, evidenziando i punti critici delle abitazioni nel nostro Paese</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | La tua casa</h3>
+                            <p class="card-description">introduce il tema della protezione della casa a tutto tondo, evidenziando i punti critici delle abitazioni nel nostro Paese</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/191w8OuuAIRlQhKq9X-Drq0q2NvJ5CsDA/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | La previdenza</h3>
-                            <p>L'assegno pensionistico pubblico non basta più: ecco gli strumenti che potranno consentirti di integrarlo.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | La previdenza</h3>
+                            <p class="card-description">L'assegno pensionistico pubblico non basta più: ecco gli strumenti che potranno consentirti di integrarlo.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/1ZEWOyFvNUR9OSmJMyxTtRiPttgs4D3lI/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | Crescita del capitale</h3>
-                            <p>Soprattutto se si è giovani, vale la pena di ricercare la crescita del capitale investito. Come? Investendo prevalentemente in azioni.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | Crescita del capitale</h3>
+                            <p class="card-description">Soprattutto se si è giovani, vale la pena di ricercare la crescita del capitale investito. Come? Investendo prevalentemente in azioni.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/12cmHnnHgobnzVfyLzhoIo_dD4ooefkWt/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | Difesa del patrimonio</h3>
-                            <p>Il passaggio generazionale è un tema delicato e più che mai occorre una buona pianificazione per ottimizzare, anche fiscalmente, la trasmissione del patrimonio.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | Difesa del patrimonio</h3>
+                            <p class="card-description">Il passaggio generazionale è un tema delicato e più che mai occorre una buona pianificazione per ottimizzare, anche fiscalmente, la trasmissione del patrimonio.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/13zvxL0onYP4owN10SkL9ENEKDJBcqH2C/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
                     <div class="conversation-starter-card">
-                        <div>
-                            <h3>Bisogni | Reddito integrativo</h3>
-                            <p>Generare reddito integrativo attraverso flussi periodici (come cedole e dividendi) per convertire il capitale in proventi costanti si può: ecco come.</p>
+                        <div class="conversation-starter-body">
+                            <h3 class="card-title">Bisogni | Reddito integrativo</h3>
+                            <p class="card-description">Generare reddito integrativo attraverso flussi periodici (come cedole e dividendi) per convertire il capitale in proventi costanti si può: ecco come.</p>
                         </div>
-                        <div>
+                        <div class="conversation-starter-footer">
                             <a href="https://drive.google.com/file/d/10ERppqWTnvr9fZZp1sP4oSOUnpbWQ0qi/view" class="download-btn" target="_blank">Scarica</a>
-                            <div class="tags">
-                            </div>
                         </div>
                     </div>
 
@@ -254,27 +170,5 @@
     </div>
 
     <script src="scripts.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('searchInput');
-            const cards = document.querySelectorAll('.conversation-starter-card');
-
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-
-                cards.forEach(card => {
-                    const title = card.querySelector('h3').textContent.toLowerCase();
-                    const description = card.querySelector('p').textContent.toLowerCase();
-                    const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
-
-                    const isVisible = title.includes(searchTerm) || 
-                                      description.includes(searchTerm) || 
-                                      tags.some(tag => tag.includes(searchTerm));
-
-                    card.style.display = isVisible ? 'block' : 'none';
-                });
-            });
-        });
-    </script>
 </body>
 </html>
